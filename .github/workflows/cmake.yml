@@ -35,11 +35,3 @@ jobs:
       # Execute tests defined by the CMake configuration.  
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest -C ${{env.BUILD_TYPE}}
-      
-    # Generate Doxygen code dodumentation and publish it to the GitHub Pages
-    - uses: langroodi/doxygenize@v1
-      with:
-        doxygenconf: './doc/doxygen.conf'
-        htmloutput: './doc/html/'
-        darkmode: true
-        customheader: 'https://raw.githubusercontent.com/langroodi/doxygenize/master/header/woman_life_freedom.html'
