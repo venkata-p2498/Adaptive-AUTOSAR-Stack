@@ -20,9 +20,12 @@ void performPolling()
 int main(int argc, char *argv[])
 {
     application::helper::ArgumentConfiguration _argumentConfiguration(argc, argv);
-    printf("KPIT ADAPTIVE AUTOSAR Stack Test\n");
-
     bool _successful{_argumentConfiguration.TryAskingVccApiKey()};
+    if (_successful)
+    {
+    printf("KPIT ADAPTIVE AUTOSAR Stack Test\n");
+    }
+
     if (!_successful)
     {
         std::cout << "Asking for the VCC API key is faile!";
