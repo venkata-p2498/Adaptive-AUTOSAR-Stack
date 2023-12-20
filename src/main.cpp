@@ -20,6 +20,7 @@ void performPolling()
 int main(int argc, char *argv[])
 {
     application::helper::ArgumentConfiguration _argumentConfiguration(argc, argv);
+    printf("KPIT ADAPTIVE AUTOSAR Stack Test\n");
 
     bool _successful{_argumentConfiguration.TryAskingVccApiKey()};
     if (!_successful)
